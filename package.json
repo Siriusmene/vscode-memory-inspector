@@ -31,7 +31,7 @@
     "serve": "serve --cors -p 3333"
   },
   "dependencies": {
-    "@vscode/codicons": "^0.0.32",
+    "@vscode/codicons": "^0.0.40",
     "deepmerge": "^4.3.1",
     "fast-deep-equal": "^3.1.3",
     "formik": "^2.4.5",
