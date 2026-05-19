@@ -40,7 +40,7 @@
     "nrf-intel-hex": "^1.4.0",
     "primeflex": "^3.3.1",
     "primereact": "^10.3.1",
-    "react": "^18.2.0",
+    "react": "^18.3.1",
     "react-dom": "^18.2.0",
     "vscode-messenger": "^0.4.5",
     "vscode-messenger-common": "^0.4.5",
