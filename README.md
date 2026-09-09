@@ -16,6 +16,7 @@ A Visual Studio Code extension that provides a powerful and configurable memory 
 - **Lock Views**: Keep views static, unaffected by updates from the debug session.
 - **Periodic Refresh**: Automatically refresh the memory data.
 - **Multiple Debug Sessions**: Switch between multiple debug sessions using a dropdown in the memory view.
+- **Data Breakpoints** (Experimental): Set data breakpoints in the memory view.
 - And much more
 
 ## Getting Started
@@ -78,6 +79,19 @@ These settings can be adjusted individually for each Memory Inspector view or gl
 ![Screenshot of the Memory Inspector](./media/memory-inspector-debug-sessions-screenshot.png)
 
 The Memory Inspector supports multiple debug sessions. If multiple debug sessions are active, a dropdown appears in the memory view which allows you to switch between them. This enables you to target different debug sessions in multiple windows, simultaneously.
+
+## Set Data Breakpoints
+
+The Memory Inspector allows to set data breakpoints from a memory view. The feature is experimental and must be enabled through the extension setting `memory-inspector.dataBreakpoints`. Also, the debug adapter must support the `DataBreakpointInfo` and `SetDataBreakpoints` requests.
+
+![Screenshot of the Memory Inspector](./media/memory-inspector-data-breakpoints-screenshot.png)
+
+1. Data Breakpoints are managed through the context menu of a memory cell. You can select between data breakpoints that halt program execution on memory read (`Read`), write (`Change`), or both (`Access`).
+2. Memory rows with one or more data breakpoints are marked with a red circle.
+3. Memory cells with a data breakpoint are marked with a red frame.
+
+**Important**:
+The Memory Inspector installs data breakpoints via the debug adapter like other built-in IDE views. However, technical limitations of the IDE prohibit adding them to the `BREAKPOINTS` view. Hence, such breakpoints must be removed again via the Memory Inspector context menu.
 
 ## Contributing
 
